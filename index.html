@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Karthik Chary Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vadla Karthik Chary</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#Skills-section" class="nav-link"><span>Skills</span></a></li>
+			  <li class="nav-item"><a href="#Internship-section" class="nav-link"><span>Internship</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);background-size: 500px 600px;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Vadla Karthik Chary</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Aspiring Data Scientist & Analytics</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="http://www.linkedin.com/in/vadlakarthikchary" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/vkc0793" class="btn btn-white btn-outline-white py-3 px-4">My Projects</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-1 col-lg-10 d-flex" >
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-10 col-md-10">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<!-- <div class="col-sm-1 col-md-1">
+									  <div class="about-info"> -->
+										<!-- <p><span class="title-s">Name: </span> <span>Vadla Karthik Chary</span></p>
+										<p><span class="title-s">Aspiration: </span> <span>Data Analyst & Data Scientist</span></p> -->
+										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
+										<!-- <p><span class="title-s">Address: </span> <span>Hyderabad, India</span></p> -->
+									  </div>
+									</div>
+								  </div>
+
+								<!-- <div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">84%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					
+					<div class="col-md-2 col-lg-8 pl-lg-9 pb-5">
+						<div class="row justify-content-start pb-5">
+							<div class="col-md-18 heading-section ftco-animate">
+								
+								<h1 class="big big-2">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Data enthusiast, and problem-solver with SQL, Power BI, Python, and ML tools. I see stories in data, weave solutions from algorithms, and yearn to join a team where my skills fuel innovation and drive results. Let's unlock impactful insights together</p>
+								<ul class="about-info mt-6 px-md-0 px-5" >
+									<!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li> -->
+									<!-- <li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+									<li class="d-flex"><span>Education:</span> <span>Bachelors of Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Telugu</span></li>
+									<!-- <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Excel, Power Point, EDA, Feature Engineering Tecniques </span></li> -->
+									<li class="d-flex"><span>Interest:</span> <span>Cricket, Badminton, Travelling</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<!-- <p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+    <section class="ftco-section ftco-no-pb" id="Skills-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Skills</h1>
+            <h2 class="mb-4">Skills</h2>
+			<span>SQL</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div><br>
+									
+									<span>Python</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div><br>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div><br>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">84%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div><br>
+									
+									<span>Machine Learning</span> <span class="pull-right">70%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> 
+
+					<style>
+						.skills-container {
+						  text-align: center;
+						}
+						.skill {
+						  margin-bottom: 10px;  /* Add some space between skills */
+						}
+					  </style>
+					  </head>
+					  <body>
+					  
+					  <!-- <h2>My Skills</h2> -->
+					  
+					  <section class="skills-container">
+						<h3>Other Skills</h3>
+						<div class="skill">
+						  NumPy, Pandas, Seaborn, Matplotlib, Scikit-Learn, Power BI, Excel
+						</div>
+						<!-- <h3>Visualization Tools</h3>
+						<div class="skill">
+						  Microsoft Power BI, Microsoft Excel
+						</div> -->
+					  </section>
+
+					
+            <!-- <p>Data enthusiast, and problem-solver with SQL, Power BI, Python, and ML tools. I see stories in data, weave solutions from algorithms, and yearn to join a team where my skills fuel innovation and drive results. Let's unlock impactful insights together</p> -->
+          </div>
+        </div><br>
+		<br>
+
+
+        <section class="ftco-section ftco-no-pb" id="Internship-section"></section>
+		<div class="row">
+			<h1 class="big-4">Internships</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+		<div class="row">
+				<div class="col-md-15">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb 24 - Mar 24</span>
+						<h2>PwC-Switzerland Power BI Virtual Internship in Data Analytics </h2>
+						<span class="position">Tool: Power BI</span>
+						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
+							<ul>
+								<li>Demonstrated expertise in crafting Power BI dashboards to effectively communicate KPI’s and promptly address client inquiries 
+									with well-designed solutions. </li>
+								<li>Communicated concisely and informatively with engagement partners via email, delivering valuable insights and actionable 
+									suggestions based on data analysis. </li>
+								<li>Examined HR data, focusing on gender-related KPI’s, identified root causes for executive management gender balance issues, 
+									and emphasized commitment to data-driven decision-making. </li>
+							</ul>
+							<p><a href="https://github.com/vkc0793/PwC-Switzerland-Power-BI-Virtual-Internship-in-Data-Analytics-.git" class="btn btn-primary py-3 px-4">View Project</a>
+						</p>
+					</div>
+
+				</div>
+
+				<!-- <div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>Senior Data Analyst</h2>
+						<span class="position">iQuanti</span>
+						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
+							<ul>
+								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
+								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
+								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
+							</ul>
+						</p>
+					</div> -->
+
+				</div>
+			</div>
+		</section>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2016-2020</span>
+    					<h2>Bachelors of Technology</h2>
+    					<span class="position">Mahatma Gandhi Institute of Technology</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014-2016</span>
+    					<h2>Intermediate Education</h2>
+    					<span class="position">Narayana Junior College</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/14rP9jucRGrtuNB1uZVOPpfzSnO3fRYei/view" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/vkc0793/Walmart-Sales-Analysis.git" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/vkc0793/Walmart-Sales-Analysis.git">Sales Analysis of Walmart Superstore </a></h3>
+                <p>Analyzed super store data using Power Bi to identify sales pattern and increase the business growth.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/vkc0793/Predictive-analysis-on-Loan-Approval.git" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/vkc0793/Predictive-analysis-on-Loan-Approval.git">Predictive Analysis on Loan Approval  </a></h3>
+                <p>Performed Machine Learning algorithms on loan approval data using Python to identified real-world fraud, leading to fast and fair loan approvals..</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/vkc0793/Health-Data-Analysis.git" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpeg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/vkc0793/Health-Data-Analysis.git">Health Data analysis using Power BI and SQL</a></h3>
+                <p>Designed a power bi dashboard on Demographics and Clinical data to analyze the obsessive and complusive types and their affects on patients.</p>
+              </div>			  
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/vkc0793/Coffee-Shop-Sales-Analysis-using-Excel.git" class="block-20 zoom-effect" style="background-image: url('images/proj_4.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/vkc0793/Coffee-Shop-Sales-Analysis-using-Excel.git">Coffee Shop Sales Analysis using Excel</a></h3>
+				  <p>Transform the sales data into Excel dashboard to identify patterns, trends and provide insights for business growth.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/vkc0793/Pizzahut-Sales-analysis-using-SQL-.git" class="block-20 zoom-effect" style="background-image: url('images/pizza.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/vkc0793/Pizzahut-Sales-analysis-using-SQL-.git">Pizza Hut Sales Analysis using SQL</a></h3>
+				  <p>Querying the MySQL database and analysing the sales data of Pizza Hut to evaluate business performance and make informed decisions accordingy.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1">0</strong>
+				<style>
+    /* Optional: Add some styling to the icon */
+    .excel-icon {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+				<!-- <img src="F:\Odin School\my portfolio\Portfolio-Website-Template-main\images\excel.png" alt="Excel Icon" class="excel-icon"> -->
+				<a href="#" class="excel-icon">
+					<img src="images/excel.png" alt="Excel Icon">
+				</a>
+                <span>Excel</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+				<style>
+    /* Optional: Add some styling to the icon */
+    .excel-icon {
+      width: 0px;
+      height: 0px;
+    }
+  </style>
+				<!-- <img src="F:\Odin School\my portfolio\Portfolio-Website-Template-main\images\powerbi.png" alt="Excel Icon" class="excel-icon"> -->
+				<a href="#" class="excel-icon">
+					<img src="images/powerbi.png">
+				</a>
+                <span>Power BI</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1">0</strong>
+				<style>
+    /* Optional: Add some styling to the icon */
+    .excel-icon {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+				<!-- <img src="F:\Odin School\my portfolio\Portfolio-Website-Template-main\images\sql.png" alt="Excel Icon" class="excel-icon"> -->
+				<a href="#" class="excel-icon">
+					<img src="images/sql.png">
+				</a>
+                <span>SQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1">0</strong>
+				<style>
+    /* Optional: Add some styling to the icon */
+    .excel-icon {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+				<!-- <img src="F:\Odin School\my portfolio\Portfolio-Website-Template-main\images\ml.png" alt="Excel Icon" class="excel-icon"> -->
+				<a href="#" class="excel-icon">
+					<img src="images/ml.png">
+				</a>
+                <span>Machine Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/vkc0793" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p> Hyderabad, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 6301512618</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">vkc0793@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/14rP9jucRGrtuNB1uZVOPpfzSnO3fRYei/view">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			
+			
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<!-- <h2>Have a<span> Question?  </span> <a href="https://forms.gle/An5QaWiZhV4rpNzN8" class="btn btn-primary py-3 px-5">Click Here</a> </h2> -->
+				</div>
+			</div>
+				
+					<!-- <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li> -->
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <!-- <li class="ftco-animate"><a href="http://www.linkedin.com/in/vadlakarthikchary"><span class="icon-linkedin"></span></a></li>   -->
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
+				      <!-- <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+				
+		   </div>
+   </div>
+ </section>
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
